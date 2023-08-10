@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 7px;
+}
+
+body {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'REM', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    background-color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    padding: 1.6rem 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* bosluk bir eleman olusturup sonra yok olmasını ıstıyecegız  */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+header {
+    height: 46rem;
+
+}
+
+header .bg-image {
+    position: absolute;
+    background-image: url(images/Developer1.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 46rem;
+    opacity: 0.8;
+    z-index: -1;
+
+}
+
+header h1 {
+    padding: 12rem;
+    padding-bottom: 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    border: 1px solid #666;
+    padding: 1.6rem 3.2rem;
+    margin: .5rem 0;
+    transition: all 0.4s;
+
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+#section-a {
+    background: #eaeaea;
+    color: #333;
+    padding: 3.2rem;
+}
+
+#section-b {
+    padding: 2rem;
+
+}
+
+/* burada listelerdeki noktaları kapattım */
+#section-b ul {
+    list-style: none;
+}
+
+/* burada ikinci metin paragrafımız */
+#section-b li {
+    background: #fff;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.col-content {
+    padding: 1.5rem;
+}
+
+#section-c {
+    background-color: #eaeaea;
+    color: #333;
+    padding: 5rem;
+
+}
+
+#section-d .box {
+    padding: 5rem;
+}
+
+#section-d .box:first-child {
+    background-color: darkcyan;
+
+}
+
+footer {
+    background: black;
+    padding: 4rem;
+}
+
+footer a {
+    color: yellowgreen;
+}
+
+/* burada daha oncekınden tam tersi gibi oldu cunku zaten sayfa mobıl ıcın bu sefer tablet ve pc ıcıın responsive kullanıyoruz */
+@media screen and (min-widht:800px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    html {
+        font-size: 11px;
+
+    }
+
+    /* kartların konumunu da degıstırmek lazım */
+    #section-b li {
+        width: 28%;
+        margin: 1%;
+        display: inline-block;
+    }
+
+    /* burada kutuların yan yana gelmesini istiyoruz */
+    .box {
+        width: 50%;
+        float: left;
+    }
+}
